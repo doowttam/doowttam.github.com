@@ -2,7 +2,10 @@ body {
     margin: 20px 80px;
     background-color: #cccccc;
 }
-.content{
+.content {
     padding: 20px;
     background-color: white;
+}
+.header {
+    text-align: center;
 }
