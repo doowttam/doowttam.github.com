@@ -1,11 +1,18 @@
 body {
-    margin: 20px 80px;
+    //margin: 20px 80px;
     background-color: #cccccc;
+    font-family: Sans-serif;
 }
-.content {
+.wrapper {
+    width: 600px;
     padding: 20px;
     background-color: white;
+    margin: 20px auto;
 }
-.header {
-    text-align: center;
+#tabContainer {
+    height: 200px;
+    margin: 0px auto;
+}
+.tabs {
+    padding: 10px;
 }
