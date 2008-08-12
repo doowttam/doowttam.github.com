@@ -1,18 +1,46 @@
 body {
-    //margin: 20px 80px;
-    background-color: #cccccc;
     font-family: Sans-serif;
+    background: white;
+    padding: 0px;
 }
-.wrapper {
+.name {
+    font-size: 3em;
+    padding-top: 135px;
+}
+.content_columns {
+    float: left;
+    width: 180px;
+    padding: 5px;
+    height: 325px;
+    margin: 5px;
+    background: #cccccc;
+}
+.about {
+    text-align: center;
+}
+.resume {
+}
+.portfolio {
+}
+.header {
+    background: #334071;
+    margin: 30px -8px;
+    padding: 10px 0px;
+    background-image: url(bg1.jpg);
+}
+.header_content {
+    margin: 0px auto;
     width: 600px;
-    padding: 20px;
-    background-color: white;
-    margin: 20px auto;
 }
-#tabContainer {
-    height: 200px;
+img {
+    border-style: none;
+}
+.columns {
+    width: 600px;
     margin: 0px auto;
 }
-.tabs {
-    padding: 10px;
+.footer {
+    width: 600px;
+    float: left;
+    margin: 0px auto;
 }
