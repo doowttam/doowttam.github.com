@@ -1,7 +1,7 @@
 body {
     font-family: Sans-serif;
     padding: 0px;
-	background: #748fad;
+	background: #6c1300;
     color: #bfcac7;
 }
 .name {
@@ -13,7 +13,7 @@ body {
     padding: 5px;
     height: 325px;
     margin: 5px;
-	background: #6c1300;
+	background: #ad632b;
 }
 .about {
     text-align: center;
@@ -23,7 +23,7 @@ body {
 .portfolio {
 }
 .header {
-	background: #6c1300;
+	background: #748fad;
     margin: 30px -8px;
     padding: 10px 0px;
 }
@@ -39,7 +39,7 @@ img {
     margin: 0px auto;
 }
 .footer {
-	background: #6c1300;
+	background: #748fad;
     margin: 30px -8px;
     padding: 10px 0px;
     width: 101.5%;
