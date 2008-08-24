@@ -1,11 +1,11 @@
 body {
     font-family: Sans-serif;
-    background: white;
     padding: 0px;
+	background: #748fad;
+    color: #bfcac7;
 }
 .name {
     font-size: 3em;
-    padding-top: 135px;
 }
 .content_columns {
     float: left;
@@ -13,7 +13,7 @@ body {
     padding: 5px;
     height: 325px;
     margin: 5px;
-    background: #cccccc;
+	background: #6c1300;
 }
 .about {
     text-align: center;
@@ -23,10 +23,9 @@ body {
 .portfolio {
 }
 .header {
-    background: #334071;
+	background: #6c1300;
     margin: 30px -8px;
     padding: 10px 0px;
-    background-image: url(bg1.jpg);
 }
 .header_content {
     margin: 0px auto;
@@ -37,10 +36,5 @@ img {
 }
 .columns {
     width: 600px;
-    margin: 0px auto;
-}
-.footer {
-    width: 600px;
-    float: left;
     margin: 0px auto;
 }
