@@ -32,9 +32,21 @@ body {
     width: 600px;
     font-size: 3em;
 }
+.banner_content a:link {
+    color: #bfcac7;
+    text-decoration: none;
+}
+.banner_content a:visited {
+    color: #bfcac7;
+    text-decoration: none;
+}
+.banner_content a:hover {
+    color: #bfcac7;
+    text-decoration: none;
+}
 .footer {
 	background: #748fad;
-    margin: 0px -8px;
+    margin: 10px -8px;
     padding-top: 35px;
     width: 101.5%;
     float: left;
