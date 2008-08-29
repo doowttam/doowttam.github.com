@@ -1,16 +1,14 @@
 body {
     font-family: Sans-serif;
     padding: 0px;
-	background: #6c1300;
-    color: #bfcac7;
 }
 .content_columns {
+    border: 1px solid black;
     float: left;
-    width: 180px;
+    width: 178px;
     padding: 5px;
     height: 325px;
     margin: 5px;
-	background: #ad632b;
 }
 .about {
     text-align: center;
@@ -18,14 +16,6 @@ body {
 .resume {
 }
 .portfolio {
-}
-.header {
-	background: #748fad;
-    margin: 0px -8px;
-    padding-top: 40px;
-    height: 106px;
-    background-image: url('images/banner.png');
-    background-repeat: repeat-x;
 }
 .banner_content {
     margin: 0px auto;
@@ -45,14 +35,10 @@ body {
     text-decoration: none;
 }
 .footer {
-	background: #748fad;
-    margin: 10px -8px;
-    padding-top: 35px;
+    border: 1px solid black;
+    margin: 0px -8px;
     width: 101.5%;
     float: left;
-    height: 106px;
-    background-image: url('images/banner.png');
-    background-repeat: repeat-x;
 }
 img {
     border-style: none;
@@ -60,4 +46,5 @@ img {
 .columns {
     width: 600px;
     margin: 0px auto;
+    margin-top: 40px;
 }
