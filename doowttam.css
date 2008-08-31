@@ -3,19 +3,26 @@ body {
     padding: 0px;
 }
 .content_columns {
-    border: 1px solid black;
     float: left;
     width: 178px;
-    padding: 5px;
     height: 325px;
     margin: 5px;
 }
 .about {
+    margin-top: 87px;
     text-align: center;
+    border: 1px solid black;
+    padding: 5px;
+
 }
 .resume {
+    padding: 5px;
+    border: 1px solid black;
 }
 .portfolio {
+    border: 1px solid black;
+    margin-top: 136px;
+    height: 85px;
 }
 .banner_content {
     margin: 0px auto;
@@ -36,7 +43,7 @@ body {
 }
 .footer {
     border: 1px solid black;
-    margin: 0px -8px;
+    margin: 0px -9px;
     width: 101.5%;
     float: left;
 }
