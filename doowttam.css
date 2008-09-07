@@ -1,49 +1,73 @@
 body {
     font-family: Sans-serif;
     padding: 0px;
+    background: #f5f5dc;
 }
 .content_columns {
     float: left;
-    width: 178px;
+    width: 185px;
     height: 325px;
-    margin: 5px;
+    margin: 10px;
 }
 .about {
-    margin-top: 87px;
+    font-size: 0.9em;
     text-align: center;
-    border: 1px solid black;
-    padding: 5px;
-
+    padding: 2px 9px 2px 5px;
+    background-image: url("images/column_bg.png");
+}
+.about_header {
+    background-image: url("images/column_header.png");
+    margin-top: 50px;
+    color: white;
+    font-weight: bold;
+    padding: 0px 5px;
+}
+.column_footer {
+    background-image: url("images/column_footer.png");
+    height: 8px;
 }
 .resume {
-    padding: 5px;
-    border: 1px solid black;
+    background-image: url("images/column_bg.png");
+    font-size: 0.9em;
+    padding: 7px;
+}
+.resume_header {
+    background-image: url("images/column_header.png");
+    color: white;
+    font-weight: bold;
+    padding: 0px 5px;
 }
 .portfolio {
-    border: 1px solid black;
-    margin-top: 136px;
     height: 85px;
+    background-image: url("images/column_bg.png");
+    padding: 0px 1px;
+}
+.portfolio_header {
+    background-image: url("images/column_header.png");
+    margin-top: 190px;
+    color: white;
+    font-weight: bold;
+    padding: 0px 5px;
 }
 .banner_content {
-    margin: 0px auto;
-    width: 600px;
-    font-size: 3em;
+    font-size: 1em;
+    margin-left: 20px;
+    //color: #bfcac7;
 }
 .banner_content a:link {
-    color: #bfcac7;
+    //color: #bfcac7;
     text-decoration: none;
 }
 .banner_content a:visited {
-    color: #bfcac7;
+    //color: #bfcac7;
     text-decoration: none;
 }
 .banner_content a:hover {
-    color: #bfcac7;
+    //color: #bfcac7;
     text-decoration: none;
 }
 .footer {
-    border: 1px solid black;
-    margin: 0px -9px;
+    margin: 50px -9px;
     width: 101.5%;
     float: left;
 }
@@ -51,7 +75,7 @@ img {
     border-style: none;
 }
 .columns {
-    width: 600px;
+    width: 630px;
     margin: 0px auto;
     margin-top: 40px;
 }
