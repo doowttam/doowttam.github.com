@@ -52,18 +52,17 @@ body {
 .banner_content {
     font-size: 1em;
     margin-left: 20px;
-    //color: #bfcac7;
-}
-.banner_content a:link {
-    //color: #bfcac7;
+ }
+.banner_content a:link, .content_columns a:link {
+    color: #3bac32;
     text-decoration: none;
 }
-.banner_content a:visited {
-    //color: #bfcac7;
+.banner_content a:visited, .content_columns a:visited {
+    color: #3bac32;
     text-decoration: none;
 }
-.banner_content a:hover {
-    //color: #bfcac7;
+.banner_content a:hover, .content_columns a:hover {
+    color: #3bac32;
     text-decoration: none;
 }
 .footer {
