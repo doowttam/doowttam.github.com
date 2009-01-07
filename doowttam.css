@@ -26,6 +26,21 @@ body a:hover {
 }
 .content {
     float: left;
-    width: 30%;
-    margin: 10px;
+    width: 28%;
+    margin: 20px;
+    text-align: justify;
+}
+.footer {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+.projects ul {
+    list-style-type: none;
+    margin-left: -40px;
+    width: 70%;
+}
+.projects li {
+    border-bottom: 1px solid black;
+    margin-top: 5px;
 }
