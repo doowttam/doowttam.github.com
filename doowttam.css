@@ -12,36 +12,24 @@ body a:hover {
 .right {
     color: #3bac32;
 }
-.center_content {
-    width: 50%;
-    font-size: 2.5em;
-    text-align: center;
-}
 .header {
     font-size: 2.5em;
 }
 #twitter_update_list {
     list-style-type: none;
-    width: 70%;
+    width: 90%;
 }
 .content {
-    float: left;
-    width: 28%;
-    margin: 20px;
-    text-align: justify;
+    border: 5px solid black;
+    padding: 10px;
 }
 .footer {
     width: 100%;
     float: left;
     margin-top: 20px;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
-.projects ul {
-    list-style-type: none;
-    margin-left: -40px;
-    width: 70%;
-}
-.projects li {
-    border-bottom: 1px solid black;
-    margin-top: 5px;
+.wrapper {
+    width: 600px;
+    margin: 0px auto;
 }
