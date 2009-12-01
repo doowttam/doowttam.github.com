@@ -1,16 +1,18 @@
 body {
   background-color: #292929;
+  color: white;
 }
 body a:link, body a:visited {
+  color: #ecd907;
   text-decoration: none;
-  color: #3bac32;
 }
 body a:hover {
-  background: #3bac32;
-  color: black;
+  color: #292929;
+  background: #ecd907;
+  text-decoration: none;
 }
 .headline {
-  font-size: 3em;
-  color: #ecd907;
+  font-size: 5.5em;
+  font-weight: bold;
   padding: 10px;
 }
