@@ -1,35 +1,16 @@
 body {
-    font-family: Helvetica, MS Verdana, Sans-serif;
+  background-color: #292929;
 }
 body a:link, body a:visited {
-    text-decoration: none;
-    color: #3bac32;
+  text-decoration: none;
+  color: #3bac32;
 }
 body a:hover {
-    background: #3bac32;
-    color: black;
+  background: #3bac32;
+  color: black;
 }
-.right {
-    color: #3bac32;
-}
-.header {
-    font-size: 2.5em;
-}
-#twitter_update_list {
-    list-style-type: none;
-    width: 90%;
-}
-.content {
-    border: 5px solid black;
-    padding: 10px;
-}
-.footer {
-    width: 100%;
-    float: left;
-    margin-top: 20px;
-    font-size: 1.3em;
-}
-.wrapper {
-    width: 600px;
-    margin: 0px auto;
+.headline {
+  font-size: 3em;
+  color: #ecd907;
+  padding: 10px;
 }
