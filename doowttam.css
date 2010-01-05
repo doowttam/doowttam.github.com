@@ -1,6 +1,7 @@
 body {
   background-color: #292929;
   color: white;
+  font-family: Sans-Serif;
 }
 body a:link, body a:visited {
   color: #ecd907;
@@ -12,7 +13,17 @@ body a:hover {
   text-decoration: none;
 }
 .headline {
-  font-size: 5.5em;
+  font-size: 10em;
   font-weight: bold;
   padding: 10px;
+}
+.mask {
+    position: absolute;
+    top: 140px;
+    left: 40px;
+    width: 720px;
+    background: red;
+    padding: 20px;
+    font-size: 1.5em;
+    color: black;
 }
