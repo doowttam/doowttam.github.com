@@ -1,7 +1,7 @@
 body {
   background-color: #292929;
   color: white;
-  font-family: Sans-Serif;
+  font-family: Helvetica, sans-serif;
 }
 body a:link, body a:visited {
   color: red;
@@ -39,7 +39,10 @@ body a:link, body a:visited {
 .topBadgesPane {
     padding: 20px;
 }
-.topBadgesPane > a {
+img {
+    border: none;
+}
+.topBadgesPane > a  {
     margin: 0px 20px;
 }
 .secondBadgesPane {
