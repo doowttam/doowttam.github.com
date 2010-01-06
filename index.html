@@ -9,12 +9,41 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.4/dojo/dojo.xd.js"></script>
+
+    <script type="text/javascript" src="doowttam.js"></script>
+
+    <script type="text/javascript">
+      dojo.require('dojo.fx');
+    </script>
+
   </head>
   
   <body>
 
     <div class="headline">doowttam</div>
-    <div class="mask">Contact - Things I Build - Github</div>
+    <div class="mask">
+
+      <div class="links">
+        <a class="jslink" onclick="toggleContact()">Contact</a> - 
+        <a class="jslink" onclick="toggleBlog()">Things I Build</a> - 
+        <a class="jslink" onclick="toggleGithub()">Github</a> - 
+        <a class="jslink" onclick="toggleNetworks()">Networks</a>
+      </div>
+
+      <div class="detailsPane" style="display: none;" id="contactPane">
+        <div>Email</div>
+      </div>
+      <div class="detailsPane" style="display: none;" id="blogPane">
+        <div>Blog</div>
+      </div>
+      <div class="detailsPane" style="display: none;" id="githubPane">
+        <div>Code</div>
+      </div>
+      <div class="detailsPane" style="display: none;" id="networksPane">
+        <div>Twitter</div>
+      </div>
+    </div>
 
   </body>
 

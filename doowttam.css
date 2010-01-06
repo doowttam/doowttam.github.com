@@ -27,3 +27,12 @@ body a:hover {
     font-size: 1.5em;
     color: black;
 }
+.jslink:hover {
+    cursor: pointer;
+}
+.detailsPane {
+    background: white;
+}
+.detailsPane > div {
+    padding: 5px;
+}
