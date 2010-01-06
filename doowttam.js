@@ -15,7 +15,7 @@ function toggle(pane) {
     }
 }
 
+function toggleAbout() { toggle("aboutPane"); }
 function toggleContact() { toggle("contactPane"); }
 function toggleBlog() { toggle("blogPane"); }
-function toggleGithub() { toggle("githubPane"); }
 function toggleNetworks() { toggle("networksPane"); }

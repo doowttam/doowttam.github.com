@@ -4,12 +4,7 @@ body {
   font-family: Sans-Serif;
 }
 body a:link, body a:visited {
-  color: #ecd907;
-  text-decoration: none;
-}
-body a:hover {
-  color: #292929;
-  background: #ecd907;
+  color: red;
   text-decoration: none;
 }
 .headline {
@@ -29,9 +24,15 @@ body a:hover {
 }
 .jslink:hover {
     cursor: pointer;
+    text-decoration: overline;
 }
 .detailsPane > div {
+    font-size: 18px;
     margin-top: 10px;
-    padding: 5px;
+    padding: 10px;
     background: white;
+}
+
+.detailsPane a:hover {
+  text-decoration: underline;
 }
