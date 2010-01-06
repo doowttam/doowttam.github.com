@@ -1,6 +1,6 @@
-function show(node) { dojo.fx.wipeIn({"node": node, "duration": 650}).play() }
+function show(node) { dojo.fx.wipeIn({"node": node, "duration": 650}).play(); }
 
-function hide(node) { dojo.fx.wipeOut({"node": node, "duration": 650}).play() }
+function hide(node) { dojo.fx.wipeOut({"node": node, "duration": 650}).play(); }
 
 function toggle(pane) {
     if ( dojo.style( pane, "display" ) == "none" ) {
