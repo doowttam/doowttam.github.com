@@ -31,8 +31,24 @@ body a:link, body a:visited {
     margin-top: 10px;
     padding: 10px;
     background: white;
+    overflow: hidden;
 }
-
 .detailsPane a:hover {
   text-decoration: underline;
+}
+.topBadgesPane {
+    padding: 20px;
+}
+.topBadgesPane > a {
+    margin: 0px 20px;
+}
+.secondBadgesPane {
+    float: left;
+    padding: 20px;
+}
+.secondBadgesPane > table {
+    margin: 0px 20px;
+}
+ .secondBadgesPane > object {
+    margin: 60px 0px 20px 20px;
 }
