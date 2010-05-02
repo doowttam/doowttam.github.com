@@ -42,16 +42,3 @@ body a:link, body a:visited {
 img {
     border: none;
 }
-.topBadgesPane > a  {
-    margin: 0px 20px;
-}
-.secondBadgesPane {
-    float: left;
-    padding: 20px;
-}
-.secondBadgesPane > table {
-    margin: 0px 20px;
-}
- .secondBadgesPane > object {
-    margin: 60px 0px 20px 20px;
-}
