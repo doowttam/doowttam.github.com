@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>doowttam/blog</title><link href="http://doowttam.com/blog/" rel="alternate"></link><link href="http://doowttam.com/blog/feeds/misc.atom.xml" rel="self"></link><id>http://doowttam.com/blog/</id><updated>2011-10-01T00:00:00-05:00</updated><entry><title>TweetMachine</title><link href="http://doowttam.com/blog/tweetmachine" rel="alternate"></link><updated>2011-10-01T00:00:00-05:00</updated><author><name>Matt Wood</name></author><id>tag:doowttam.com/blog,2011-10-01:tweetmachine</id><summary type="html">&lt;p&gt;TweetMachine started 2 or 3 years ago when I wanted to reuse an old laptop.
+For one reason or another (lack of tools, lack of parts, forgetting about it)
+it sat on my "open projects" self through 2 moves. Last week, though, it
+occured to me that I had acquired the last piece of hardware I needed and
+hadn't realized it. So, it was time to finish the project and make room on the
+projects shelf.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.flickr.com/photos/doowttam/6199497986/" title="TweetMachine Finished by doowttam_, on Flickr"&gt;&lt;img src="http://farm7.static.flickr.com/6154/6199497986_57509458aa.jpg" height="375" alt="TweetMachine Finished" width="500" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The device is basically a slightly deconstructed laptop in a shadow box frame
+running a custom Twitter client. What follows are the details so you can build
+your very own TweetMachine!&lt;/p&gt;
+&lt;h1&gt;Hardware&lt;/h1&gt;
+&lt;p&gt;First thing, the screen needs to be separated from the bottom half of the
+laptop enough so that it can be easily manipulated. In my experience there is
+only one main cable connecting the base to the screen and it connects through
+one of the hinges. By taking apart the screen first you should be able to see
+this.&lt;/p&gt;
+&lt;p&gt;In the Dell Inspiron I was dealing with there were two metal hinges that ran
+along the screen from top to bottom to keep the screen stiff and restrict
+movement. Those needed to be removed so that the screen could go back as far
+as I needed it to. After the hinges were removed I put the screen back
+together.&lt;/p&gt;
+&lt;p&gt;To suspend the laptop in a way that would work within the shadow box I decided
+to mount it to pegboard. This is the piece that took the most time to figure
+out. What I settled on was using plumber's strap to make brackets. Each
+individual bracket isn't very strong, but by distributing the weight of the
+laptop between 6 or 8 of them things were stable.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.flickr.com/photos/doowttam/6199495684/" title="TweetMachine Build by doowttam_, on Flickr"&gt;&lt;img src="http://farm7.static.flickr.com/6141/6199495684_d36003504b.jpg" height="375" alt="TweetMachine Build" width="500" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.flickr.com/photos/doowttam/6199496472/" title="TweetMachine Build by doowttam_, on Flickr"&gt;&lt;img src="http://farm7.static.flickr.com/6145/6199496472_1c8069be2b.jpg" height="375" alt="TweetMachine Build" width="500" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.flickr.com/photos/doowttam/6198980947/" title="TweetMachine Build by doowttam_, on Flickr"&gt;&lt;img src="http://farm7.static.flickr.com/6156/6198980947_bfc3d8994c.jpg" height="375" alt="TweetMachine Build" width="500" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The laptop fit snugly in the frame, but I was concerned about overheating so I
+cut a vent with a Dremel and a hole for the power cable. The back board for
+the frame also worried me, so I cut out most of the center and left only
+enough of a frame to secure the laptop.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.flickr.com/photos/doowttam/6199510160/" title="TweetMachine Build by doowttam_, on Flickr"&gt;&lt;img src="http://farm7.static.flickr.com/6147/6199510160_f87f3eef14.jpg" height="375" alt="TweetMachine Build" width="500" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.flickr.com/photos/doowttam/6198994247/" title="TweetMachine Build by doowttam_, on Flickr"&gt;&lt;img src="http://farm7.static.flickr.com/6171/6198994247_4a03db3cb1.jpg" height="375" alt="TweetMachine Build" width="500" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.flickr.com/photos/doowttam/6199512492/" title="TweetMachine Build by doowttam_, on Flickr"&gt;&lt;img src="http://farm7.static.flickr.com/6149/6199512492_bb447ce61b.jpg" height="375" alt="TweetMachine Build" width="500" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Originally I had planned to use a nice photo matte to cover up the rough edges
+and only reveal the screen. But after putting it together with and without
+that set up, it felt less interesting with it. Cara convinced me it looked
+cooler without the matte, so I left it just like that.&lt;/p&gt;
+&lt;h1&gt;Software&lt;/h1&gt;
+&lt;p&gt;I installed the latest long term release of Ubuntu and configured it to start
+without requiring you to log in. (This is normally a bad idea, by the way.) I
+then needed to unlock the keyring automatically so that it could connect to
+the wifi without you needing to type in your password. (Again, a bad idea
+normally.) Next I installed unclutter, which automatically hides the mouse
+cursor. I disabled the screensaver among other power management tweaks.
+Finally, in power managment, I configured the power button to shut the
+computer down (without asking) whenever it was pressed.&lt;/p&gt;
+&lt;p&gt;The end result is a laptop that will start up, log in, and connect to the wifi
+without intervention. Even better, when you press the power button again it'll
+shut itself down.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.flickr.com/photos/doowttam/6199498442/" title="TweetMachine Finished by doowttam_, on Flickr"&gt;&lt;img src="http://farm7.static.flickr.com/6027/6199498442_772300f529.jpg" height="375" alt="TweetMachine Finished" width="500" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I wanted a twitter client with no branding and a simple but attractive
+interface. Twitter's API is pretty easy to work with so I decided to write one
+myself. With Adobe Air, I was able to easily make a full screen app with no
+window controls.&lt;/p&gt;
+&lt;p&gt;The app supports following one user's timeline and a pre-specified search. By
+left clicking anywhere in the app it'll toggle between the two modes. (The
+left mouse button is easily accessible from the back of the device.)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Quick styling note:&lt;/strong&gt; I was using pretty light colors as the background for the app. But, once I finished putting it together and put it in my living room I noticed how the terrible viewing angle of the laptop screen washed out the colors. My solution was to bump up the saturation of the blue and purple quite a bit. Looking at it straight on you see really bright colors, but anywhere else in the room you see the colors as I was originally picturing them.&lt;/p&gt;
+&lt;p&gt;Finally, the last piece was to configure my app to start whenever I logged in.&lt;/p&gt;
+&lt;p&gt;You can grab the code here: &lt;a href="https://github.com/doowttam/TweetMachine"&gt;https://github.com/doowttam/TweetMachine&lt;/a&gt; It
+won't win any code design awards, but it's simple and runs smoothly.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Quick note about OAuth:&lt;/strong&gt; Twitter moved to OAuth recently for user authentication. This is great for users but can be annoying for developers. Luckly though, Twitter allows you to shortcut the OAuth process if you're the developer of the app. For simplicity I went this route and hard-coded the access keys. This does mean, though, that the app can only work with one user's timeline.&lt;/p&gt;
+&lt;h1&gt;Future Improvements&lt;/h1&gt;
+&lt;p&gt;I'd love to have more control over the app remotely. So, I'm planning on
+running a light webserver and webapp that'll allow anyone connecting to it
+within my apartment to tweak the setttings and change the search term. Right
+now the search is hard-coded and although it's easy to change, it requires
+SSHing into the machine and restarting the app.&lt;/p&gt;
+&lt;p&gt;I'd also like to have the app expand links and show videos (muted) and images
+that people link to. I don't think it'd be too hard and would really increase
+the interesting-ness of the appliance.&lt;/p&gt;</summary></entry><entry><title>Issues Benchmarking MySQL With Sysbench</title><link href="http://doowttam.com/blog/mysql-benchmarking-with-sysbench" rel="alternate"></link><updated>2010-12-05T00:00:00-06:00</updated><author><name>Matt Wood</name></author><id>tag:doowttam.com/blog,2010-12-05:mysql-benchmarking-with-sysbench</id><summary type="html">&lt;p&gt;Benchmarking MySQL can be a tricky task. There are many variables that interact with each other and it can be difficult to run good isolated experiments and get data you can use. I ran into trouble benchmarking with sysbench recently that stumped me at first.
+I was upgrading a database server to MySQL 5.1 from MySQL 5.0 in the hopes of getting better concurrency performance from InnoDB. The first step in that upgrade process was to run some benchmarks on 5.0 and 5.1 to make sure we were getting the benefits we were aiming for and not taking any performance hits. I performed an end-to-end application benchmark, a concurrency benchmark, and two standard benchmarks. The standard benchmarks were &lt;a href="http://sysbench.sourceforge.net/docs/"&gt;sysbench&lt;/a&gt; (read only and read/write) and the &lt;a href="http://sourceforge.net/apps/mediawiki/osdldbt/index.php?title=Main_Page"&gt;Database Test Suite’s OLTP test&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;The Mystery&lt;/h1&gt;
+&lt;p&gt;All of my benchmarks looked great except for the sysbench test. I was getting an order of magnitude better performance from 5.0 than from 5.1. This kind of performance regression was pretty disconcerting and needed to be investigated before we could continue with the upgrade.&lt;/p&gt;
+&lt;p&gt;The first step was isolating the variables. I got two cloud servers with a base Debian Lenny install and installed MySQL on both. (One server had 5.0, and the other 5.1.) I wanted to be sure that none of the other config our servers normally have could be causing the performance regression. I tweaked the config identically on both servers to give some reasonable values for things like the InnoDB buffer pool size. I then had sysbench create a test table with 1000000 rows. Finally I dumped the table and imported it into the other MySQL server.&lt;/p&gt;
+&lt;p&gt;The next step was to confirm that the problem still existed in my new isolated setups. The benchmark I used was the following:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=sysbench --mysql-user=root --max-time=60 --max-requests=0 --num-threads=4 --oltp-read-only=on run&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Running that on the new setups gave these results:&lt;/p&gt;
+&lt;h2&gt;Transactions Per Second&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MySQL 5.0: 1309.28&lt;/li&gt;
+&lt;li&gt;MySQL 5.1: 425.23&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This confirms that after removing all of the variables associated with our setup and our applications the performance regression was still present. MySQL 5.0 was performing more than three times better than 5.1 on this read only benchmark.&lt;/p&gt;
+&lt;h1&gt;The Investigation&lt;/h1&gt;
+&lt;p&gt;The first thing to investigate were the MySQL status variables. I noticed that MySQL 5.1 had a really high query cache lowmem prune rate, especially when compared to the insert rate. I checked the same query cache variables in 5.0 and found that the query cache wasn’t being used at all. This was a surprise since the query cache was turned on in both installs and configured in the exact same way.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;mysql&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;show&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="k"&gt;like&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;%Qcache%&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="o"&gt;+-------------------------+---------+&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Variable_name&lt;/span&gt;           &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Value&lt;/span&gt;   &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;+-------------------------+---------+&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Qcache_free_blocks&lt;/span&gt;      &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;2549&lt;/span&gt;    &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Qcache_free_memory&lt;/span&gt;      &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;9036656&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Qcache_hits&lt;/span&gt;             &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;74182&lt;/span&gt;   &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Qcache_inserts&lt;/span&gt;          &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;298916&lt;/span&gt;  &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Qcache_lowmem_prunes&lt;/span&gt;    &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;291970&lt;/span&gt;  &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Qcache_not_cached&lt;/span&gt;       &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;92&lt;/span&gt;      &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Qcache_queries_in_cache&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;6946&lt;/span&gt;    &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Qcache_total_blocks&lt;/span&gt;     &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;16442&lt;/span&gt;   &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;+-------------------------+---------+&lt;/span&gt;
+&lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="n"&gt;rows&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="kt"&gt;set&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt; &lt;span class="n"&gt;sec&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;MySQL 5.0&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;mysql&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;show&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="k"&gt;like&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;%Qcache%&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="o"&gt;+-------------------------+----------+&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Variable_name&lt;/span&gt;           &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Value&lt;/span&gt;    &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;+-------------------------+----------+&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Qcache_free_blocks&lt;/span&gt;      &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;        &lt;span class="o"&gt;|&lt;/span&gt; 
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Qcache_free_memory&lt;/span&gt;      &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;16759744&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; 
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Qcache_hits&lt;/span&gt;             &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;        &lt;span class="o"&gt;|&lt;/span&gt; 
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Qcache_inserts&lt;/span&gt;          &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;        &lt;span class="o"&gt;|&lt;/span&gt; 
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Qcache_lowmem_prunes&lt;/span&gt;    &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;        &lt;span class="o"&gt;|&lt;/span&gt; 
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Qcache_not_cached&lt;/span&gt;       &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;1105842&lt;/span&gt;  &lt;span class="o"&gt;|&lt;/span&gt; 
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Qcache_queries_in_cache&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;        &lt;span class="o"&gt;|&lt;/span&gt; 
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Qcache_total_blocks&lt;/span&gt;     &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;        &lt;span class="o"&gt;|&lt;/span&gt; 
+&lt;span class="o"&gt;+-------------------------+----------+&lt;/span&gt;
+&lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="n"&gt;rows&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="kt"&gt;set&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt; &lt;span class="n"&gt;sec&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You can see that MySQL was pruning almost as many queries from the query cache as it was inserting in 5.1.&lt;/p&gt;
+&lt;p&gt;As an experiment I turned off the query cache in both installs and ran the benchmarks again. This time I got these results:&lt;/p&gt;
+&lt;h2&gt;Transactions Per Second&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MySQL 5.0: 1305.35&lt;/li&gt;
+&lt;li&gt;MySQL 5.1: 1313.37&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It was now pretty clear that I had found the performance problem. It had something to do with a change in the way the query cache operated between 5.0 and 5.1. A quick googling for changes in the query cache between versions didn’t turn anything up, so it was time to dig a bit deeper.&lt;/p&gt;
+&lt;p&gt;I realized that I didn’t know much about the queries sysbench was running. This can be found out pretty easily by turning on the general log in MySQL. I ran the benchmarks again and checked the logs. I found that sysbench uses 10 different types of queries and that it executes them using prepared statements. Now this time google was able to give me some answers. As of &lt;a href="http://dev.mysql.com/doc/refman/5.1/en/query-cache.html"&gt;5.1.17, the query cache&lt;/a&gt; can cache prepared statements.&lt;/p&gt;
+&lt;p&gt;From skimming the general log after running sysbench it was clear that the read only benchmark was a worst case scenario for the query cache. It was a lot of simple, generally non-repeating, selects. This means that there is going to be a high query cache insert rate, but low hit rate (because they’re unlikely to repeat), and because so many are being inserted the cache is going to be constantly pruned.&lt;/p&gt;
+&lt;p&gt;Determining the value of the query cache is a whole separate problem. Some would argue that you’re better off without it. But, I wasn’t trying to evaluate the query cache, and since our apps don’t rely on prepared statements the results I was getting didn’t give a fair representation of how our app would perform.&lt;/p&gt;
+&lt;h1&gt;The Takeaway&lt;/h1&gt;
+&lt;p&gt;It was important to figure out what caused the performance regression. It couldn’t just be ignored, even though the other three benchmarks all agreed with each other. Once I figured out what caused the strange results (prepared statements are cached using the query cache) I could make a decision as to whether or not that was important. If you use a lot of prepared statements in your apps, then this information is very valuable and should be considered in your decision to upgrade.&lt;/p&gt;
+&lt;p&gt;By setting db-ps-mode to disabled you can tell sysbench not to use prepared statements. Once I determined that this better reflected the actual kinds of selects we used in our apps I could run the benchmarks again without the prepared statements:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=sysbench --mysql-user=root --max-time=60 --max-requests=0 --num-threads=4 --oltp-read-only=on --db-ps-mode=disable run&lt;/code&gt;&lt;/p&gt;</summary><category term="benchmarking"></category><category term="mysql"></category></entry><entry><title>First Thoughts on Dependency Injection</title><link href="http://doowttam.com/blog/first-thoughts-on-dependency-injection" rel="alternate"></link><updated>2010-11-20T00:00:00-06:00</updated><author><name>Matt Wood</name></author><id>tag:doowttam.com/blog,2010-11-20:first-thoughts-on-dependency-injection</id><summary type="html">&lt;p&gt;I may be a little late to the Dependency Injection (DI) party, but it's something I've been thinking about a lot recently. We're experimenting with writing more isolated unit tests at work and one of the tools we're planning on using is DI.
+Here's the basic idea as I see it. When you design software in an object oriented way you end up with an object graph. I define an object graph as the image (mental or otherwise) that defines the relationships between your objects. With DI you take those links between objects and make them more flexible.&lt;/p&gt;
+&lt;p&gt;For example, let's imagine that object A needs objects B and C to do some task. Object A could just instantiate objects B and C and then use them to perform work, but that means the links between object A and objects B and C are very rigid.&lt;/p&gt;
+&lt;p&gt;Now, refactor the code so that object A requires objects B and C to be passed in. The links on the object graph are now a little less rigid because as long as an object follows the interface offered by object B it could be passed in instead of B. Object A doesn't care as long as it works the same.&lt;/p&gt;
+&lt;p&gt;The real value to me is that when testing object A I can be less concerned about objects B and C. For my test I'll assume they work correctly and pass in mocked versions of them that return expected values for their methods. Then I focus on making sure object A works correctly. In a different test I'll test object B. With those two pieces tested I've tested each piece in isolation which is easier to process when writing a test, but I've also tested everything as long as B's interface stays the same.&lt;/p&gt;
+&lt;p&gt;That's the biggest downside to unit testing in isolation I've seen. You'll also need a functional test that ensures object A and object B interact properly and agree on B's interface.&lt;/p&gt;
+&lt;p&gt;One of the main criticisms I've seen is that DI is the enemy of encapsulation. Encapsulation is the idea that every object only exposes the things it must to other objects. This criticism feels very valid to me. At the moment I'm giving up that encapsulation for more isolation in testing.&lt;/p&gt;
+&lt;p&gt;I also like DI for passing in other dependencies. For example, passing in a logging function. Maybe in production you want to write to the syslog. In your tests you may just want to make sure the correct values get sent to the log but you don't want to have your tests check the syslog. One way around this is to have your object take in a logging function and in your tests have that function write to STDOUT or some variable you can check.&lt;/p&gt;
+&lt;p&gt;While looking around the web on the subject I was surprised to find that it appears to be controversial. Some complain that it's not new idea at all and others that it's actually a bad idea. I was sold on the theory the first time I read about it, but haven't used it a lot in practice. I'm still learning and it's something I'm trying to think about as I write code. It'll be interesting to come back to this post and topic in a few months and see how I'm doing.&lt;/p&gt;
+&lt;p&gt;Here are a few links to read about the disagreement on DI's usefulness or correctness. The Wikipedia talk page is especially interesting.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Talk:Dependency_injection"&gt;Wikipedia talk page on Dependency Injection&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.infoq.com/news/2007/12/does-di-pay-off"&gt;Does Dependency Injection Pay Off?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://kohari.org/2007/08/15/defending-dependency-injection/"&gt;Defending Dependency Injection&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="testing"></category></entry><entry><title>Tron-O-Lantern</title><link href="http://doowttam.com/blog/tron-o-lantern" rel="alternate"></link><updated>2010-10-30T00:00:00-05:00</updated><author><name>Matt Wood</name></author><id>tag:doowttam.com/blog,2010-10-30:tron-o-lantern</id><summary type="html">&lt;p&gt;&lt;object width="460" height="325"&gt;
+&lt;param name="allowfullscreen" value="true" /&gt;
+&lt;param name="allowscriptaccess" value="always" /&gt;
+&lt;param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=16356055&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=1&amp;amp;show_portrait=1&amp;amp;color=00ADEF&amp;amp;fullscreen=1&amp;amp;autoplay=0&amp;amp;loop=0" /&gt; &lt;embed src="http://vimeo.com/moogaloop.swf?clip_id=16356055&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=1&amp;amp;show_portrait=1&amp;amp;color=00ADEF&amp;amp;fullscreen=1&amp;amp;autoplay=0&amp;amp;loop=0" type="application/x-shockwave-flash" width="460" height="325"&gt;&lt;/embed&gt;
+&lt;/object&gt;&lt;/p&gt;
+&lt;p&gt;Here’s my Tron Legacy inspired Tron-O-Lantern. The design is based on the costume design seen in promotions for the upcoming movie. The glowing comes from 4 LEDs (3 blue, 1 green) and is powered by an Arduino. The Arduino is over-kill in this case, but it’s what I had.&lt;/p&gt;
+&lt;p&gt;I’d do a couple things differently with the design if I did another pass. There were issues that I didn’t notice until it was carved. For instance, the center rings should be the focal point, but they’re not because they’re too small and dim.&lt;/p&gt;
+&lt;p&gt;Here’s a clearer picture of the pumpkin:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Tron-O-Lantern" src="http://doowttam.com/blog/static/images/tron-pumpkin.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Here’s the design I put together in Inkscape:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Design" src="http://doowttam.com/blog/static/images/tron-inkscape.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Here’s a shot of the Arduino set up:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Design" src="http://doowttam.com/blog/static/images/arduino-tron.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;I just put the LEDs and resistors directly on the Protoshield, powered it with a 9 volt battery and put the whole set up in a gallon size plastic bag.&lt;/p&gt;</summary><category term="arduino"></category></entry></feed>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				<title>doowttam/blog &mdash; Articles tagged benchmarking</title>
+		<meta charset="utf-8" />
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<link rel="stylesheet" type="text/css" href="../theme/css/style.css" />
+		<link rel='stylesheet' id='oswald-css'  href='http://fonts.googleapis.com/css?family=Oswald&#038;ver=3.3.2' type='text/css' media='all' />
+		<style type="text/css">
+			body.custom-background { background-color: #f5f5f5; }
+		</style>
+		<link rel="alternate" type="application/atom+xml"
+			title="doowttam/blog — Flux Atom"
+			href="../" /> 
+				<!--[if lte IE 8]><script src="../theme/js/html5shiv.js"></script><![endif]-->
+				</head>
+
+<body class="home blog custom-background single-author" >
+	<div id="container">
+		<div id="header">
+				<h1 id="site-title"><a href="..">doowttam/blog</a></h1>
+						</div><!-- /#banner -->
+		
+		<div id="menu">
+			<div class="menu-navigation-container">
+				<ul id="menu-navigation" class="menu">
+										  															  						<li  class="active" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://twitter.com/doowttam">Twitter</a></li>
+					  						<li  class="active" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://github.com/doowttam">Github</a></li>
+					  					
+				</ul>
+			</div> <!--/#menu-navigation-container-->
+		</div><!-- /#menu -->
+		
+		<div class="page-title">
+			<div class="page-title">
+	<h2>Tagged with <span>benchmarking</span> &hellip;</h2>
+</div>
+		</div>
+	
+		<div id="contents">
+						<div class="post type-post status-publish format-standard hentry category-general" id="post">
+	<div class="entry-meta">
+		<div class="date"><a href="../mysql-benchmarking-with-sysbench">12-05-2010</a></div>
+							</div> <!-- /#entry-meta -->
+	<div class="main">
+		<h2 class="entry-title">
+			<a href="../mysql-benchmarking-with-sysbench" title="Permalink to Issues Benchmarking MySQL With Sysbench" rel="bookmark">Issues Benchmarking MySQL With Sysbench</a>
+		</h2>
+		<div class="entry-content">
+			<p>Benchmarking MySQL can be a tricky task. There are many variables that interact with each other and it can be difficult to run good isolated experiments and get data you can use. I ran into trouble benchmarking with sysbench recently that stumped me at first.
+I was upgrading a database server to MySQL 5.1 from MySQL 5.0 in the hopes of getting better concurrency performance from InnoDB. The first step in that upgrade process was to run some benchmarks on 5.0 and 5.1 to make sure we were getting the benefits we were aiming for and not taking any performance hits. I performed an end-to-end application benchmark, a concurrency benchmark, and two standard benchmarks. The standard benchmarks were <a href="http://sysbench.sourceforge.net/docs/">sysbench</a> (read only and read/write) and the <a href="http://sourceforge.net/apps/mediawiki/osdldbt/index.php?title=Main_Page">Database Test Suite’s OLTP test</a>.</p>
+<h1>The Mystery</h1>
+<p>All of my benchmarks looked great except for the sysbench test. I was getting an order of magnitude better performance from 5.0 than from 5.1. This kind of performance regression was pretty disconcerting and needed to be investigated before we could continue with the upgrade.</p>
+<p>The first step was isolating the variables. I got two cloud servers with a base Debian Lenny install and installed MySQL on both. (One server had 5.0, and the other 5.1.) I wanted to be sure that none of the other config our servers normally have could be causing the performance regression. I tweaked the config identically on both servers to give some reasonable values for things like the InnoDB buffer pool size. I then had sysbench create a test table with 1000000 rows. Finally I dumped the table and imported it into the other MySQL server.</p>
+<p>The next step was to confirm that the problem still existed in my new isolated setups. The benchmark I used was the following:</p>
+<p><code>sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=sysbench --mysql-user=root --max-time=60 --max-requests=0 --num-threads=4 --oltp-read-only=on run</code></p>
+<p>Running that on the new setups gave these results:</p>
+<h2>Transactions Per Second</h2>
+<ul>
+<li>MySQL 5.0: 1309.28</li>
+<li>MySQL 5.1: 425.23</li>
+</ul>
+<p>This confirms that after removing all of the variables associated with our setup and our applications the performance regression was still present. MySQL 5.0 was performing more than three times better than 5.1 on this read only benchmark.</p>
+<h1>The Investigation</h1>
+<p>The first thing to investigate were the MySQL status variables. I noticed that MySQL 5.1 had a really high query cache lowmem prune rate, especially when compared to the insert rate. I checked the same query cache variables in 5.0 and found that the query cache wasn’t being used at all. This was a surprise since the query cache was turned on in both installs and configured in the exact same way.</p>
+<div class="codehilite"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">show</span> <span class="n">status</span> <span class="k">like</span> <span class="s1">&#39;%Qcache%&#39;</span><span class="p">;</span>
+<span class="o">+-------------------------+---------+</span>
+<span class="o">|</span> <span class="n">Variable_name</span>           <span class="o">|</span> <span class="n">Value</span>   <span class="o">|</span>
+<span class="o">+-------------------------+---------+</span>
+<span class="o">|</span> <span class="n">Qcache_free_blocks</span>      <span class="o">|</span> <span class="mi">2549</span>    <span class="o">|</span>
+<span class="o">|</span> <span class="n">Qcache_free_memory</span>      <span class="o">|</span> <span class="mi">9036656</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">Qcache_hits</span>             <span class="o">|</span> <span class="mi">74182</span>   <span class="o">|</span>
+<span class="o">|</span> <span class="n">Qcache_inserts</span>          <span class="o">|</span> <span class="mi">298916</span>  <span class="o">|</span>
+<span class="o">|</span> <span class="n">Qcache_lowmem_prunes</span>    <span class="o">|</span> <span class="mi">291970</span>  <span class="o">|</span>
+<span class="o">|</span> <span class="n">Qcache_not_cached</span>       <span class="o">|</span> <span class="mi">92</span>      <span class="o">|</span>
+<span class="o">|</span> <span class="n">Qcache_queries_in_cache</span> <span class="o">|</span> <span class="mi">6946</span>    <span class="o">|</span>
+<span class="o">|</span> <span class="n">Qcache_total_blocks</span>     <span class="o">|</span> <span class="mi">16442</span>   <span class="o">|</span>
+<span class="o">+-------------------------+---------+</span>
+<span class="mi">8</span> <span class="n">rows</span> <span class="k">in</span> <span class="kt">set</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span> <span class="n">sec</span><span class="p">)</span>
+</pre></div>
+
+
+<p>MySQL 5.0</p>
+<div class="codehilite"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">show</span> <span class="n">status</span> <span class="k">like</span> <span class="s1">&#39;%Qcache%&#39;</span><span class="p">;</span>
+<span class="o">+-------------------------+----------+</span>
+<span class="o">|</span> <span class="n">Variable_name</span>           <span class="o">|</span> <span class="n">Value</span>    <span class="o">|</span>
+<span class="o">+-------------------------+----------+</span>
+<span class="o">|</span> <span class="n">Qcache_free_blocks</span>      <span class="o">|</span> <span class="mi">1</span>        <span class="o">|</span> 
+<span class="o">|</span> <span class="n">Qcache_free_memory</span>      <span class="o">|</span> <span class="mi">16759744</span> <span class="o">|</span> 
+<span class="o">|</span> <span class="n">Qcache_hits</span>             <span class="o">|</span> <span class="mi">0</span>        <span class="o">|</span> 
+<span class="o">|</span> <span class="n">Qcache_inserts</span>          <span class="o">|</span> <span class="mi">0</span>        <span class="o">|</span> 
+<span class="o">|</span> <span class="n">Qcache_lowmem_prunes</span>    <span class="o">|</span> <span class="mi">0</span>        <span class="o">|</span> 
+<span class="o">|</span> <span class="n">Qcache_not_cached</span>       <span class="o">|</span> <span class="mi">1105842</span>  <span class="o">|</span> 
+<span class="o">|</span> <span class="n">Qcache_queries_in_cache</span> <span class="o">|</span> <span class="mi">0</span>        <span class="o">|</span> 
+<span class="o">|</span> <span class="n">Qcache_total_blocks</span>     <span class="o">|</span> <span class="mi">1</span>        <span class="o">|</span> 
+<span class="o">+-------------------------+----------+</span>
+<span class="mi">8</span> <span class="n">rows</span> <span class="k">in</span> <span class="kt">set</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span> <span class="n">sec</span><span class="p">)</span>
+</pre></div>
+
+
+<p>You can see that MySQL was pruning almost as many queries from the query cache as it was inserting in 5.1.</p>
+<p>As an experiment I turned off the query cache in both installs and ran the benchmarks again. This time I got these results:</p>
+<h2>Transactions Per Second</h2>
+<ul>
+<li>MySQL 5.0: 1305.35</li>
+<li>MySQL 5.1: 1313.37</li>
+</ul>
+<p>It was now pretty clear that I had found the performance problem. It had something to do with a change in the way the query cache operated between 5.0 and 5.1. A quick googling for changes in the query cache between versions didn’t turn anything up, so it was time to dig a bit deeper.</p>
+<p>I realized that I didn’t know much about the queries sysbench was running. This can be found out pretty easily by turning on the general log in MySQL. I ran the benchmarks again and checked the logs. I found that sysbench uses 10 different types of queries and that it executes them using prepared statements. Now this time google was able to give me some answers. As of <a href="http://dev.mysql.com/doc/refman/5.1/en/query-cache.html">5.1.17, the query cache</a> can cache prepared statements.</p>
+<p>From skimming the general log after running sysbench it was clear that the read only benchmark was a worst case scenario for the query cache. It was a lot of simple, generally non-repeating, selects. This means that there is going to be a high query cache insert rate, but low hit rate (because they’re unlikely to repeat), and because so many are being inserted the cache is going to be constantly pruned.</p>
+<p>Determining the value of the query cache is a whole separate problem. Some would argue that you’re better off without it. But, I wasn’t trying to evaluate the query cache, and since our apps don’t rely on prepared statements the results I was getting didn’t give a fair representation of how our app would perform.</p>
+<h1>The Takeaway</h1>
+<p>It was important to figure out what caused the performance regression. It couldn’t just be ignored, even though the other three benchmarks all agreed with each other. Once I figured out what caused the strange results (prepared statements are cached using the query cache) I could make a decision as to whether or not that was important. If you use a lot of prepared statements in your apps, then this information is very valuable and should be considered in your decision to upgrade.</p>
+<p>By setting db-ps-mode to disabled you can tell sysbench not to use prepared statements. Once I determined that this better reflected the actual kinds of selects we used in our apps I could run the benchmarks again without the prepared statements:</p>
+<p><code>sysbench --test=oltp --oltp-table-size=1000000 --mysql-db=sysbench --mysql-user=root --max-time=60 --max-requests=0 --num-threads=4 --oltp-read-only=on --db-ps-mode=disable run</code></p>
+		</div> <!--/#entry-content-->
+		    		<span class="tag-links"><strong>Tagged</strong>
+    			    			 <a href="../tag/benchmarking.html" rel="tag">benchmarking</a>,  <a href="../tag/mysql.html" rel="tag">mysql</a>    		</span>
+    		</div> <!--/#main-->
+</div>  <!--/#post-->		<div class="navigation">
+		</div>
+		</div>
+		
+		<div id="footer">
+			<p>Powered by <a href="http://pelican.readthedocs.org">Pelican</a>, theme by <a href="http://bunnyman.info">tBunnyMan</a>.</p>
+								</div><!-- /#footer -->
+	</div><!-- /#container -->
+	<div style="display:none"></div>
+</body>
+</html>
