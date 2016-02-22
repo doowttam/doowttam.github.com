@@ -1,90 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-				<title>doowttam/blog &mdash; Articles tagged testing</title>
-		<meta charset="utf-8" />
-		<link rel="profile" href="http://gmpg.org/xfn/11" />
-		<link rel="stylesheet" type="text/css" href="../theme/css/style.css" />
-		<link rel='stylesheet' id='oswald-css'  href='http://fonts.googleapis.com/css?family=Oswald&#038;ver=3.3.2' type='text/css' media='all' />
-		<style type="text/css">
-			body.custom-background { background-color: #f5f5f5; }
-		</style>
-		<link rel="alternate" type="application/atom+xml"
-			title="doowttam/blog — Flux Atom"
-			href="../" /> 
-				<!--[if lte IE 8]><script src="../theme/js/html5shiv.js"></script><![endif]-->
-				</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="doowttam/blog, ">
 
-<body class="home blog custom-background single-author" >
-	<div id="container">
-		<div id="header">
-				<h1 id="site-title"><a href="..">doowttam/blog</a></h1>
-						</div><!-- /#banner -->
-		
-		<div id="menu">
-			<div class="menu-navigation-container">
-				<ul id="menu-navigation" class="menu">
-										  															  						<li  class="active" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://twitter.com/doowttam">Twitter</a></li>
-					  						<li  class="active" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://github.com/doowttam">Github</a></li>
-					  					
-				</ul>
-			</div> <!--/#menu-navigation-container-->
-		</div><!-- /#menu -->
-		
-		<div class="page-title">
-			<div class="page-title">
-	<h2>Tagged with <span>testing</span> &hellip;</h2>
-</div>
-		</div>
-	
-		<div id="contents">
-						<div class="post type-post status-publish format-standard hentry category-general" id="post">
-	<div class="entry-meta">
-		<div class="date"><a href="../first-thoughts-on-dependency-injection">11-20-2010</a></div>
-							</div> <!-- /#entry-meta -->
-	<div class="main">
-		<h2 class="entry-title">
-			<a href="../first-thoughts-on-dependency-injection" title="Permalink to First Thoughts on Dependency Injection" rel="bookmark">First Thoughts on Dependency Injection</a>
-		</h2>
-		<div class="entry-content">
-			<p>I may be a little late to the Dependency Injection (DI) party, but it's something I've been thinking about a lot recently. We're experimenting with writing more isolated unit tests at work and one of the tools we're planning on using is DI.
-Here's the basic idea as I see it. When you design software in an object oriented way you end up with an object graph. I define an object graph as the image (mental or otherwise) that defines the relationships between your objects. With DI you take those links between objects and make them more flexible.</p>
-<p>For example, let's imagine that object A needs objects B and C to do some task. Object A could just instantiate objects B and C and then use them to perform work, but that means the links between object A and objects B and C are very rigid.</p>
-<p>Now, refactor the code so that object A requires objects B and C to be passed in. The links on the object graph are now a little less rigid because as long as an object follows the interface offered by object B it could be passed in instead of B. Object A doesn't care as long as it works the same.</p>
-<p>The real value to me is that when testing object A I can be less concerned about objects B and C. For my test I'll assume they work correctly and pass in mocked versions of them that return expected values for their methods. Then I focus on making sure object A works correctly. In a different test I'll test object B. With those two pieces tested I've tested each piece in isolation which is easier to process when writing a test, but I've also tested everything as long as B's interface stays the same.</p>
-<p>That's the biggest downside to unit testing in isolation I've seen. You'll also need a functional test that ensures object A and object B interact properly and agree on B's interface.</p>
-<p>One of the main criticisms I've seen is that DI is the enemy of encapsulation. Encapsulation is the idea that every object only exposes the things it must to other objects. This criticism feels very valid to me. At the moment I'm giving up that encapsulation for more isolation in testing.</p>
-<p>I also like DI for passing in other dependencies. For example, passing in a logging function. Maybe in production you want to write to the syslog. In your tests you may just want to make sure the correct values get sent to the log but you don't want to have your tests check the syslog. One way around this is to have your object take in a logging function and in your tests have that function write to STDOUT or some variable you can check.</p>
-<p>While looking around the web on the subject I was surprised to find that it appears to be controversial. Some complain that it's not new idea at all and others that it's actually a bad idea. I was sold on the theory the first time I read about it, but haven't used it a lot in practice. I'm still learning and it's something I'm trying to think about as I write code. It'll be interesting to come back to this post and topic in a few months and see how I'm doing.</p>
-<p>Here are a few links to read about the disagreement on DI's usefulness or correctness. The Wikipedia talk page is especially interesting.</p>
-<ul>
-<li><a href="http://en.wikipedia.org/wiki/Talk:Dependency_injection">Wikipedia talk page on Dependency Injection</a></li>
-<li><a href="http://www.infoq.com/news/2007/12/does-di-pay-off">Does Dependency Injection Pay Off?</a></li>
-<li><a href="http://kohari.org/2007/08/15/defending-dependency-injection/">Defending Dependency Injection</a></li>
-</ul>
-		</div> <!--/#entry-content-->
-		    		<span class="tag-links"><strong>Tagged</strong>
-    			    			 <a href="../tag/testing.html" rel="tag">testing</a>    		</span>
-    		</div> <!--/#main-->
-</div>  <!--/#post-->		<div class="navigation">
-		</div>
-		</div>
-		
-		<div id="footer">
-			<p>Powered by <a href="http://pelican.readthedocs.org">Pelican</a>, theme by <a href="http://bunnyman.info">tBunnyMan</a>.</p>
-							<script type="text/javascript">
-					var _gaq = _gaq || [];
-					_gaq.push(['_setAccount', 'UA-30574320-1']);
-					_gaq.push(['_trackPageview']);
-					(function() {
-						var ga = document.createElement('script'); 
-						ga.type = 'text/javascript'; ga.async = true;
-						ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-					})();
-				</script>
-								</div><!-- /#footer -->
-	</div><!-- /#container -->
-	<div style="display:none"></div>
+        <link rel="alternate"  href="http://doowttam.com/blog/feeds/all.atom.xml" type="application/atom+xml" title="doowttam/blog Full Atom Feed"/>
+
+        <title>testing tag // doowttam/blog // </title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://doowttam.com/blog/theme/css/pure.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background: none repeat scroll 0% 0% #3D4F5D">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <h1 class="brand-main"><a href="http://doowttam.com/blog">doowttam/blog</a></h1>
+                            <p class="tagline"></p>
+                                <p class="social">
+                                    <a href="http://twitter.com/doowttam">
+                                        <i class="fa fa-Twitter fa-3x"></i>
+                                    </a>
+                                    <a href="http://github.com/doowttam">
+                                        <i class="fa fa-Github fa-3x"></i>
+                                    </a>
+                                </p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                <h1 class="content-subhead">
+Posts tagged 'testing'                </h1>
+                    <section class="post">
+                        <header class="post-header">
+                            <h3><a class="post-title" href="http://doowttam.com/blog/first-thoughts-on-dependency-injection">First Thoughts on Dependency Injection</a></h3>
+                            <p class="post-meta"><p>I may be a little late to the Dependency Injection (DI) party, but it's something I've been thinking about a lot recently. We're experimenting with writing more isolated unit tests at work and one of the tools we're planning on using is DI.
+Here's the ...</p></p>
+                            <p class="post-meta">
+                                in <a href="http://doowttam.com/blog/category/misc.html">misc</a> &middot; 11-20-2010
+                            </p>
+                        </header>
+                    </section>
+<div class="pagination-wrapper content-subhead">
+    <div class="pagination">
+        <div class="pagination-left">
+                &nbsp;
+        </div>
+        <span>Page 1 / 1</span>
+        <div class="pagination-right">
+        </div>
+    </div>
+</div><footer class="footer">
+    <p>&copy; Matt Wood &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-30574320-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+    </script>
+
 </body>
 </html>
